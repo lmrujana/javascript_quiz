@@ -1,0 +1,23 @@
+var startCard = document.getElementById('start-card');
+var firstQuestion = document.getElementById('first-question');
+var secondQuestion = document.getElementById('second-question');
+var thirdQuestion = document.getElementById('third-question');
+var fourthQuestion = document.getElementById('fourth-question');
+var fifthQuestion = document.getElementById('fifth-question');
+var sixthQuestion = document.getElementById('sixth-question');
+var seventhQuestion = document.getElementById('seventh-question');
+var eighthQuestion = document.getElementById('eighth-question');
+var ninthQuestion = document.getElementById('ninth-question');
+var tenthQuestion = document.getElementById('tenth-question');
+
+startCard.hidden = false;
+firstQuestion.hidden = false;
+secondQuestion.hidden = true;
+thirdQuestion.hidden = true;
+fourthQuestion.hidden = true;
+fifthQuestion.hidden = true;
+sixthQuestion.hidden = true;
+seventhQuestion.hidden = true;
+eighthQuestion.hidden = true;
+ninthQuestion.hidden = true;
+tenthQuestion.hidden = true;
