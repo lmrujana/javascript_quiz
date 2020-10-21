@@ -52,3 +52,7 @@ body{
     background-color: #E9EBED;
     padding: 3%;
 }
+
+.next-button{
+  float: right;
+}

@@ -22,157 +22,277 @@
                 the time limit. Keep in mind that incorrect answers will
                 penalize your score/time by ten seconds.
             </p>
-            <button>Start Quiz</button>
+            <button id="start-button">Start Quiz</button>
         </section>
         
         <!--Quiz Questions-->
         <section id="first-question" class="quiz-card">
-            <h1>Commonly used data types DON NOT include:</h1>
-            <ol>
-                <li>Strings</li>
-                <li>Numbers</li>
-                <li>Alerts</li>
-                <li>Booleans</li>
-            </ol>
+            <h1>1 - Commonly used data types DON NOT include:</h1>
+                <ol>
+                    <li>
+                        <input type="radio" id="question1-1" name="answer" value="wrong">
+                        <label for="question1-1">Strings</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question1-2" name="answer" value="wrong">
+                        <label for="question1-2">Numbers</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question1-3" name="answer" value="right">
+                        <label for="question1-3">Alerts</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question1-4" name="answer" value="wrong">           
+                        <label for="question1-4">Booleans</label>
+                    </li>
+                </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="first-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="second-question" class="quiz-card">
-            <h1>Inside which HTML element do we put JavaScript?</h1>
-            <ol>
-                <li>&lt;script&gt;</li>
-                <li>&lt;js&gt;</li>
-                <li>&lt;scripting&gt;</li>
-                <li>&lt;javascript&gt;</li>
-            </ol>
+            <h1>2 - Inside which HTML element do we put JavaScript?</h1>  
+                <ol>
+                    <li>    
+                        <input type="radio" id="question2-1" name="answer" value="wrong">
+                        <label for="question2-1">&lt;script&gt;</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question2-2" name="answer" value="wrong">
+                        <label for="question2-1">&lt;js&gt;</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question2-3" name="answer" value="wrong">
+                        <label for="question2-1">&lt;scripting&gt;</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="question2-4" name="answer" value="wrong">
+                        <label for="question2-1">&lt;javascript&gt;</label>
+                    </li>
+                </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="second-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="third-question" class="quiz-card">
-            <h1>Where is the correct place to inset a JavaScript?</h1>
+            <h1>3 - Where is the correct place to inset a JavaScript?</h1>
             <ol>
-                <li>&lt;body&gt;</li>
-                <li>&lt;head&gt;</li>
-                <li>&lt;header&gt;</li>
-                <li>Both the &lt;head&gt; and the &lt;body&gt; are correct</li>
+                <li>    
+                    <input type="radio" id="question3-1" name="answer" value="wrong">
+                    <label for="question3-1">&lt;body&gt;</label>
+                </li>
+                <li>
+                    <input type="radio" id="question3-2" name="answer" value="wrong">
+                    <label for="question3-2">&lt;head&gt;</label>
+                </li>
+                <li>
+                    <input type="radio" id="question3-3" name="answer" value="wrong">
+                    <label for="question3-3">&lt;header&gt;</label>
+                </li>
+                <li>    
+                    <input type="radio" id="question3-4" name="answer" value="wrong">
+                    <label for="question3-4">Both the &lt;head&gt; and the &lt;body&gt; are correct</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="third-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="fourth-question" class="quiz-card">
-            <h1>How do you write "Hello World" in an alert box?</h1>
+            <h1>4 - How do you write "Hello World" in an alert box?</h1>
             <ol>
-                <li>msg('Hello World')</li>
-                <li>alertBox('Hello World')</li>
-                <li>alert('Hello World')</li>
-                <li>msgBox('Hello World')</li>
+                <li>
+                    <input type="radio" id="question4-1" name="answer" value="wrong">
+                    <label for="question4-1">msg('Hello World')</label>
+                </li>
+                <li>
+                    <input type="radio" id="question4-2" name="answer" value="wrong">
+                    <label for="question4-2">alertBox('Hello World')</label>
+                </li>
+                <li>    
+                    <input type="radio" id="question4-3" name="answer" value="wrong">
+                    <label for="question4-3">alert('Hello World')</label>
+                </li>
+                <li>
+                    <input type="radio" id="question4-4" name="answer" value="wrong">
+                    <label for="question4-4">msgBox('Hello World')</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="fourth-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="fifth-question" class="quiz-card">
-            <h1>How do you create a function in JavaScript?</h1>
+            <h1>5 - How do you create a function in JavaScript?</h1>
             <ol>
-                <li>function: myFunction()</li>
-                <li>function myFunction()</li>
-                <li>function = myFunction()</li>
-                <li>myFunction = ()</li>
+                <li>
+                    <input type="radio" id="question5-1" name="answer" value="wrong">
+                    <label for="question5-1">function: myFunction()</label>
+                </li>
+                <li>
+                    <input type="radio" id="question5-2" name="answer" value="wrong">
+                    <label for="question5-2">function myFunction()</label>
+                </li>
+                <li>
+                    <input type="radio" id="question5-3" name="answer" value="wrong">
+                    <label for="question5-3">function = myFunction()</label>
+                </li>
+                <li>
+                    <input type="radio" id="question5-4" name="answer" value="wrong">
+                    <label for="question5-4">myFunction = ()</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="fifth-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="sixth-question" class="quiz-card">
-            <h1>How to write an IF statement in JavaScript?</h1>
+            <h1>6 - How to write an IF statement in JavaScript?</h1>
             <ol>
-                <li>if i = 5 then</li>
-                <li>if i = 5</li>
-                <li>if i == 5 then</li>
-                <li>if (i == 5)</li>
+                <li>    
+                    <input type="radio" id="question6-1" name="answer" value="wrong">
+                    <label>if i = 5 then</label>
+                </li>
+                <li>
+                    <input type="radio" id="question6-2" name="answer" value="wrong">
+                    <label>if i = 5</label>
+                </li>
+                <li>
+                    <input type="radio" id="question6-3" name="answer" value="wrong">
+                    <label>if i == 5 then</label>
+                </li>
+                <li>
+                    <input type="radio" id="question6-4" name="answer" value="wrong">
+                    <label>if (i == 5)</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="sixth-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="seventh-question" class="quiz-card">
-            <h1>How can you add a commet in JavaScript?</h1>
+            <h1>7 - How can you add a commet in JavaScript?</h1>
             <ol>
-                <li>//This is a comment</li>
-                <li>comment('This is a comment)'</li>
-                <li>"This is a comment"</li>
-                <li>&lt;--This is a comment--&gt;</li>
+                <li>
+                    <input type="radio" id="question7-1" name="answer" value="wrong">
+                    <label for="question7-1">//This is a comment</label>
+                </li>
+                <li>
+                    <input type="radio" id="question7-2" name="answer" value="wrong">
+                    <label for="question7-2">comment('This is a comment)'</label>
+                </li>
+                <li>
+                    <input type="radio" id="question7-3" name="answer" value="wrong">
+                    <label for="question7-3">"This is a comment"</label>
+                </li>
+                <li>
+                    <input type="radio" id="question7-4" name="answer" value="wrong">
+                    <label for="question7-4">&lt;--This is a comment--&gt;</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="seventh-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="eighth-question" class="quiz-card">
-            <h1>What is the correct way to write a JavaScript array?</h1>
+            <h1>8 - What is the correct way to write a JavaScript array?</h1>
             <ol>
-                <li>var colors = "red", "blue", "green"</li>
-                <li>var colors = ["red", "blue", "green"]</li>
-                <li>var colors = {"red", "blue", "green"}</li>
-                <li>var colors = ("red", "blue", "green")</li>
+                <li>
+                    <input type="radio" id="question8-1" name="answer" value="wrong">
+                    <label for="question8-1">var colors = "red", "blue", "green"</label>
+                </li>
+                <li>
+                    <input type="radio" id="question8-2" name="answer" value="wrong">
+                    <label for="question8-2">var colors = ["red", "blue", "green"]</label>
+                </li>
+                <li>
+                    <input type="radio" id="question8-3" name="answer" value="wrong">
+                    <label for="question8-3">var colors = {"red", "blue", "green"}</label>
+                </li>
+                <li>
+                    <input type="radio" id="question8-4" name="answer" value="wrong">
+                    <label for="question8-4">var colors = ("red", "blue", "green")</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="eighth-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="ninth-question" class="quiz-card">
-            <h1>How do you declare a JavaScript variable?</h1>
+            <h1>9 - How do you declare a JavaScript variable?</h1>
             <ol>
-                <li>variable myVariable</li>
-                <li>v myVariable</li>
-                <li>var myVariable</li>
-                <li>var(myVariable)</li>
+                <li>
+                    <input type="radio" id="question9-1" name="answer" value="wrong">
+                    <label for="question9-1">variable myVariable</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-2" name="answer" value="wrong">
+                    <label for="question9-2">v myVariable</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-3" name="answer" value="wrong">
+                    <label for="question9-3">var myVariable</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <label for="question9-4">var(myVariable)</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="ninth-button" class="next-button">Next</button>
             </div>
         </section>
 
         <section id="tenth-question" class="quiz-card">
-            <h1>How do you round the number 7.25, to the nearest integer?</h1>
+            <h1>10 - How do you round the number 7.25, to the nearest integer?</h1>
             <ol>
-                <li>round(7.25)</li>
-                <li>Math.round(7.25)</li>
-                <li>rnd(7.25)</li>
-                <li>Math.rnd(7.25)</li>
+                <li>
+                    <input type="radio" id="question10-1" name="answer" value="wrong">
+                    <label for="question10-1">round(7.25)</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <label for="question10-1">Math.round(7.25)</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <labe for="question10-1">rnd(7.25)</label>
+                </li>
+                <li>
+                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <label for="question10-1">Math.rnd(7.25)</label>
+                </li>
             </ol>
             <hr>
             <div>
                 <span id="result"></span>
-                <button>Next</button>
+                <button id="tenth-button" class="next-button">Next</button>
             </div>
         </section>
 
