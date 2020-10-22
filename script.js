@@ -46,6 +46,14 @@ startButton.addEventListener('click', function(){
 firstButton.addEventListener('click', function(){
     secondQuestion.hidden = false;
     firstQuestion.hidden = true;
+    var firstOpt = document.querySelectorAll('#first-question input[name="answer"]');
+    var answerOne;
+    for(var opt of firstOpt){
+        if(opt.checked){
+            answerOne = opt.value;
+        };
+    };
+    console.log(answerOne);
 });
 
 secondButton.addEventListener('click', function(){
