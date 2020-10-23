@@ -10,6 +10,7 @@ var seventhQuestion = document.getElementById('seventh-question');
 var eighthQuestion = document.getElementById('eighth-question');
 var ninthQuestion = document.getElementById('ninth-question');
 var tenthQuestion = document.getElementById('tenth-question');
+var resultCard = document.getElementById('result-card');
 
 //Card Button
 var startButton = document.getElementById('start-button');
@@ -36,9 +37,11 @@ seventhQuestion.hidden = true;
 eighthQuestion.hidden = true;
 ninthQuestion.hidden = true;
 tenthQuestion.hidden = true;
+resultCard.hidden = true;
 
 //Score
-var scoreValue = 0;
+var finalResult = document.getElementById('final-result');
+let scoreValue = 0;
 
 //Button Interactivity
 startButton.addEventListener('click', function(){
@@ -78,7 +81,7 @@ secondButton.addEventListener('click', function(){
             answerTwo = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerTwo){
         case 'right':
             scoreValue+=10;
             break;
@@ -100,7 +103,7 @@ thirdButton.addEventListener('click', function(){
             answerThree = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerThree){
         case 'right':
             scoreValue+=10;
             break;
@@ -122,7 +125,7 @@ fourthButton.addEventListener('click', function(){
             answerFour = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerFour){
         case 'right':
             scoreValue+=10;
             break;
@@ -137,14 +140,14 @@ fourthButton.addEventListener('click', function(){
 fifthButton.addEventListener('click', function(){
     sixthQuestion.hidden = false;
     fifthQuestion.hidden = true;
-    var firstOpt = document.querySelectorAll('#fifth-question input[name="answer"]');
-    var answerOne;
-    for(var opt of firstOpt){
+    var fifthOpt = document.querySelectorAll('#fifth-question input[name="answer"]');
+    var answerFive;
+    for(var opt of fifthOpt){
         if(opt.checked){
-            answerOne = opt.value;
+            answerFive = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerFive){
         case 'right':
             scoreValue+=10;
             break;
@@ -166,7 +169,7 @@ sixthButton.addEventListener('click', function(){
             answerSix = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerSix){
         case 'right':
             scoreValue+=10;
             break;
@@ -188,7 +191,7 @@ seventhButton.addEventListener('click', function(){
             answerSeven = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerSeven){
         case 'right':
             scoreValue+=10;
             break;
@@ -210,7 +213,7 @@ eighthButton.addEventListener('click', function(){
             answerEight = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerEight){
         case 'right':
             scoreValue+=10;
             break;
@@ -232,7 +235,7 @@ ninthButton.addEventListener('click', function(){
             answerNine = opt.value;
         };
     };
-    switch(answerOne){
+    switch(answerNine){
         case 'right':
             scoreValue+=10;
             break;
@@ -244,5 +247,27 @@ ninthButton.addEventListener('click', function(){
     };
 });
 
+tenthButton.addEventListener('click', function(){
+    resultCard.hidden = false;
+    tenthQuestion.hidden = true;
+    var tenthOpt = document.querySelectorAll('#tenth-question input[name="answer"]');
+    var answerTen;
+    for(var opt of tenthOpt){
+        if(opt.checked){
+            answerTen = opt.value;
+        };
+    };
+    switch(answerTen){
+        case 'right':
+            scoreValue+=10;
+            break;
+        case 'wrong':
+            if(scoreValue > 10){
+                scoreValue-=10;
+            };
+            break;
+    };
+    finalResult.textContent = scoreValue.toString();
+});
 
 
