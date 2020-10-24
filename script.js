@@ -44,10 +44,37 @@ resultCard.hidden = true;
 var finalResult = document.getElementById('final-result');
 let scoreValue = 0;
 
+//Timer
+var timer = document.getElementById('timer');
+var secLeft = 60;
+
 //Button Interactivity
 startButton.addEventListener('click', function(){
     firstQuestion.hidden = false;
     startCard.hidden = true;
+    var timerInterval = setInterval(function(){
+        secLeft--;
+        timer.textContent = secLeft;
+
+        if(secLeft === 0 || !resultCard.hidden){
+            clearInterval(timerInterval);
+            startCard.hidden = true;
+            firstQuestion.hidden = true;
+            secondQuestion.hidden = true;
+            thirdQuestion.hidden = true;
+            fourthQuestion.hidden = true;
+            fifthQuestion.hidden = true;
+            sixthQuestion.hidden = true;
+            seventhQuestion.hidden = true;
+            eighthQuestion.hidden = true;
+            ninthQuestion.hidden = true;
+            tenthQuestion.hidden = true;
+            resultCard.hidden = false;
+            finalResult.textContent = scoreValue.toString();
+        }
+       
+    }, 1000);
+
 });
 
 firstButton.addEventListener('click', function(){
@@ -62,9 +89,12 @@ firstButton.addEventListener('click', function(){
     };
     switch(answerOne){
         case 'right':
+            document.getElementById('result-one').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-one').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -84,9 +114,12 @@ secondButton.addEventListener('click', function(){
     };
     switch(answerTwo){
         case 'right':
+            document.getElementById('result-two').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-two').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -106,9 +139,12 @@ thirdButton.addEventListener('click', function(){
     };
     switch(answerThree){
         case 'right':
+            document.getElementById('result-three').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-three').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -128,9 +164,12 @@ fourthButton.addEventListener('click', function(){
     };
     switch(answerFour){
         case 'right':
+            document.getElementById('result-four').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-four').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -150,9 +189,12 @@ fifthButton.addEventListener('click', function(){
     };
     switch(answerFive){
         case 'right':
+            document.getElementById('result-five').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-five').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -172,9 +214,12 @@ sixthButton.addEventListener('click', function(){
     };
     switch(answerSix){
         case 'right':
+            document.getElementById('result-six').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-six').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -194,9 +239,12 @@ seventhButton.addEventListener('click', function(){
     };
     switch(answerSeven){
         case 'right':
+            document.getElementById('result-seven').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-seven').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -216,9 +264,12 @@ eighthButton.addEventListener('click', function(){
     };
     switch(answerEight){
         case 'right':
+            document.getElementById('result-eight').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-eight').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -238,9 +289,12 @@ ninthButton.addEventListener('click', function(){
     };
     switch(answerNine){
         case 'right':
+            document.getElementById('result-nine').textContent = 'Previous Answer was Right!'
             scoreValue+=10;
             break;
         case 'wrong':
+            document.getElementById('result-nine').textContent = 'Previous Answer was Wrong!'
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };
@@ -263,6 +317,7 @@ tenthButton.addEventListener('click', function(){
             scoreValue+=10;
             break;
         case 'wrong':
+            secLeft-=5;
             if(scoreValue > 10){
                 scoreValue-=10;
             };

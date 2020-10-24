@@ -41,7 +41,7 @@ body{
     box-sizing: content-box;
 }
 
-#highscores{
+header, #highscores{
     color: #FD8383;
     font-size: large;
 }
@@ -56,8 +56,21 @@ body{
     font-size: 1.5em;
 }
 
+.result-footer{
+  color: #ce405f9a;
+  font-size: medium;
+  font-weight: 700;
+}
+
 .next-button, #start-button, #home-button, #clear-button{
   float: right;
+  background-color: #FD8383;
+  color: #E9EBED;
+  font-size: 1em;
+  border-radius: 8px;
+}
+
+#save-button{
   background-color: #FD8383;
   color: #E9EBED;
   font-size: 1em;
