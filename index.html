@@ -9,7 +9,7 @@
 <body>
     <header>
         <!--Link to Highscores and Timer-->
-        <a id="highscores">View Highscores</a>
+        <a href="score.html" id="highscores">View Highscores</a>
         <span style="float: right;">Timer: <span id="timer">60<span></span>
     </header>
 
@@ -258,7 +258,7 @@
                     <label for="question9-3">var myVariable</label>
                 </li>
                 <li>
-                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <input type="radio" id="question9-4" name="answer" value="wrong">
                     <label for="question9-4">var(myVariable)</label>
                 </li>
             </ol>
@@ -277,15 +277,15 @@
                     <label for="question10-1">round(7.25)</label>
                 </li>
                 <li>
-                    <input type="radio" id="question9-5" name="answer" value="right">
+                    <input type="radio" id="question10-2" name="answer" value="right">
                     <label for="question10-1">Math.round(7.25)</label>
                 </li>
                 <li>
-                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <input type="radio" id="question10-3" name="answer" value="wrong">
                     <labe for="question10-1">rnd(7.25)</label>
                 </li>
                 <li>
-                    <input type="radio" id="question9-5" name="answer" value="wrong">
+                    <input type="radio" id="question10-4" name="answer" value="wrong">
                     <label for="question10-1">Math.rnd(7.25)</label>
                 </li>
             </ol>
@@ -301,6 +301,9 @@
         <section id="result-card" class="quiz-card">
             <h1>Your Result!</h1>
             <p id="final-result"></p>
+            <label>Enter your initials</label>
+            <input type="text" id="user-initials">
+            <br>
             <button id="save-button">Save Score</button>
         </section>
 
