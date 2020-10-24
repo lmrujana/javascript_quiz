@@ -24,6 +24,7 @@ var seventhButton = document.getElementById('seventh-button');
 var eighthButton = document.getElementById('eighth-button');
 var ninthButton = document.getElementById('ninth-button');
 var tenthButton = document.getElementById('tenth-button');
+var saveButton = document.getElementById('save-button');
 
 //Hide or show question cards
 startCard.hidden = false;
@@ -269,5 +270,34 @@ tenthButton.addEventListener('click', function(){
     };
     finalResult.textContent = scoreValue.toString();
 });
+
+
+function makeEntry(u_initials,u_highscore){
+    var entry = {
+        initials: u_initials,
+        highscore: u_highscore
+    };
+    
+    return entry;
+}
+
+saveButton.addEventListener('click', function(){
+    var userInitials = document.getElementById('user-initials').value;
+    if(!userInitials){
+        alert('Please enter your initials');
+    } else {
+        var newEntry = makeEntry(userInitials,scoreValue);
+        if (localStorage.getItem('highscores')) {
+            var updatedHighScore = JSON.parse(localStorage.getItem('highscores'));
+            updatedHighScore.push(newEntry)
+            localStorage.setItem('highscores', JSON.stringify(updatedHighScore));
+        } else {
+            var highScores = [];
+            highScores.push(newEntry);
+            localStorage.setItem('highscores', JSON.stringify(highScores));
+        };
+    }; 
+    window.location.assign('score.html'); 
+})
 
 

@@ -7,6 +7,39 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <main>
+        <section id="high-score-list" class="quiz-card">
+            <h1>Highscores</h1>
+            <ol id="users-scores">
+
+            </ol>
+            <button id="home-button" onclick="homePage()">Go Back</button>
+            <button id="clear-button" onclick="clearItem()">Clear Last Entry</button>
+        </section>
+    </main>
+
+    <script>
+        function homePage() {
+            window.location.assign('index.html');
+        }
+
+        function clearItem(){
+            var list = document.getElementById('users-scores');
+            list.removeChild(list.lastChild);
+
+            var scoreArray = JSON.parse(localStorage.getItem('highscores'));
+            scoreArray.pop();
+            localStorage.setItem('highscores', JSON.stringify(scoreArray));
+        }
+
+        
+        var highScoresArray = JSON.parse(localStorage.getItem('highscores'));
+        highScoresArray.forEach(function(user){
+            var newListItem = document.createElement('li');
+            newListItem.textContent = `${user.initials} - ${user.highscore}`;
+            document.getElementById('users-scores').append(newListItem);
+        })
+    </script>
     
 </body>
 </html>

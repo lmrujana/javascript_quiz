@@ -38,6 +38,7 @@
 body{
     font-family: 'Work Sans', sans-serif;
     background-color: #691D43;
+    box-sizing: content-box;
 }
 
 #highscores{
@@ -46,22 +47,35 @@ body{
 }
 
 .quiz-card{
-    width: 50%;
+    width: 60%;
     margin: 30px auto;
     border: 8px solid #ce405f;
     border-radius: 4px;
     background-color: #E9EBED;
-    padding: 3%;
+    padding: 5%;
     font-size: 1.5em;
 }
 
-.next-button, #start-button{
+.next-button, #start-button, #home-button, #clear-button{
   float: right;
   background-color: #FD8383;
   color: #E9EBED;
-  font-size: 1.15em;
+  font-size: 1em;
   border-radius: 8px;
 }
+
+@media only screen and (max-width: 1160px){
+  .next-button, #start-button, #home-button, #clear-button{
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 995px){
+  .next-button, #start-button, #home-button, #clear-button{
+    font-size: 0.7em;
+  }
+}
+
 
 #final-result{
   margin-top: 0.5em;
